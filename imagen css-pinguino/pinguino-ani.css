@@ -1,0 +1,186 @@
+
+h1 {
+    color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 200%;  
+    text-decoration: underline;
+    text-align: center;
+  
+}
+.pinguino-completo {
+    --pinguino-barriga: rgb(202, 196, 196);
+    --pinguino-pico: orange;
+    --pinguino-piel: rgb(235, 177, 177);
+    position: relative;
+    margin: auto;
+    display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(10%, 1fr)); 
+    margin-top: 5%;
+    width: 400px;
+    height: 400px;
+  }
+.pinguino-parte-superior {
+    background-color: black;
+    top: 10%;
+    left: 25%;
+    width: 50%;
+    height: 45%;
+    border-radius: 70% 70% 60% 60% ;
+}
+
+.pinguino-parte-inferior {
+    background-color: black;
+    width: 53%;
+    height: 45%;
+    border-radius: 70% 70% 100% 100%;
+    top: 40%;
+    left: 23%;
+}
+
+.mano-derecha {
+    background-color:black;
+    width: 30%;
+    height: 60%;
+    top: 0%;
+    left: -5%;
+    border-radius: 30% 30% 120% 30%;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.mano-izquierda {
+    background-color:black;
+    width: 30%;
+    height: 60%;
+    top: 0%;
+    left: 75%;
+    border-radius: 30% 30% 30% 120%;
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+.mejilla-derecha {
+    background-color:white;
+    background: var(--pinguino-barriga, white);
+    width: 60%;
+    height: 70%;
+    top: 15%;
+    left: 35%;
+    border-radius: 70% 70% 60% 60%;
+}
+.mejilla-izquierda {
+    background-color:white;
+    background: var(--pinguino-barriga, white);
+    width: 60%;
+    height: 70%;
+    top: 15%;
+    left: 5%;
+    border-radius: 70% 70% 60% 60%;
+}
+.barriga {
+    background: white;
+    background-color: var(--pinguino-barriga, white);
+    width: 95%;
+    height: 100%;
+    top: 60%;
+    left: 2.5%;
+    border-radius: 90% 90% 120% 120%;
+    z-index: 1;
+  
+}
+.pie-derecho {
+    background: orange;
+    background-color: var(--pinguino-pico, orange);
+    top: 85%;
+    left: 60%;
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(-80deg);
+    z-index: -2;
+}
+.pie-izquierdo {
+    background: orange;
+    background-color: var(--pinguino-pico, orange);
+    top: 85%;
+    left: 25%;
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(80deg);
+    z-index: -2;
+}
+.ojo-derecho {
+    background: black;
+    top: 45%;
+    left: 60%;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+   
+}
+.ojo-izquierdo {
+    background: black;
+    top: 45%;
+    left: 25%;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+   
+}
+.reflejo-ojos {
+    background: white;
+    top: 25%;
+    left: 15%;
+    width: 35%;
+    height: 35%;
+    border-radius: 50%;
+}
+.color-mejilla-derecha {
+    background: pink;
+    top: 65%;
+    left: 15%;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+    z-index: 1;
+}
+.color-mejilla-izquierda {
+    background: pink;
+    top: 65%;
+    left: 70%;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+    z-index: 1;
+}
+.pico-superior {
+    background: orange;
+    background-color: var(--pinguino-pico, orange);
+    top: 60%;
+    left: 40%;
+    width: 20%;
+    height: 10%;
+    border-radius: 50%;
+    z-index: 1;
+}
+.pico-inferior {
+    background: orange;
+    background-color: var(--pinguino-pico, orange);
+    top: 65%;
+    left: 42%;
+    width: 16%;
+    height: 10%;
+    border-radius: 50%;
+    z-index: 1;
+}
+body {
+    background: rgb(178, 221, 238);
+}
+
+/* para dibujos en el div COMPLETO (se pone position relativa) y luego se pone otra vez al final con el selector universal paraque reaccione a todas las partes internas*/ 
+.pinguino-completo * {
+    position: absolute;
+}
+
+
+
